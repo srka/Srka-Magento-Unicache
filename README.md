@@ -1,9 +1,9 @@
-Srka-Unicache
+Srka Magento Unicache
 =====================
 
-Srka Unicache is an extremely simple and useful little extension that you can use to cache any kind of text/string based data in Magento. It uses helpers to make it accessible from anywhere; from template files to your own custom code.
+Srka Magento Unicache is an extremely simple and useful little extension that you can use to cache any kind of text/string based data in Magento. It uses helpers to make it accessible from anywhere; from template files to your own custom code.
 
-While making the Srka Flicker Gallery extension I needed an easy way of caching the Flickr API responses because the Flickr API servers were somewhat slow and there was no need to make the API request every time user opens the gallery. There were several different API responses that I needed to cache in one database table so I needed a universal solution to cache all of them and that’s how Srka Unicache extension was born.
+While making the Srka Magento Flicker Gallery extension I needed an easy way of caching the Flickr API responses because the Flickr API servers were somewhat slow and there was no need to make the API request every time user opens the gallery. There were several different API responses that I needed to cache in one database table so I needed a universal solution to cache all of them and that’s how Srka Magento Unicache extension was born.
 
 If you ever need to use some third-part REST or any other type of API that requires you to wait for the response, this extension is a must have. Please share your thoughts about other use cases in the comments section below.
 
@@ -23,14 +23,14 @@ Features
 
 How to install?
 ---------------
-Download Srka Unicache extension files to your Magento root directory.
+Download Srka Magento Unicache extension files to your Magento root directory.
 
 If you are logged in to your Magento back-end you have to log out and then log in again. Clearing the cache would also be a good idea.
 
 
 How does it work?
 -----------------
-Srka Unicache uses one database table to store all the cached data in a simple name - content structure. Every cached item has:
+Srka Magento Unicache uses one database table to store all the cached data in a simple name - content structure. Every cached item has:
   * Name
   * Content
   * Date and time of the last update
