@@ -1,0 +1,16 @@
+*
+
+!.gitignore
+!app/
+!app/code/
+!app/code/community/
+
+!app/code/community/Srka/
+!app/code/community/Srka/Unicache/
+!app/code/community/Srka/Unicache/*
+!app/code/community/Srka/Unicache/*/*
+!app/code/community/Srka/Unicache/*/*/*
+!app/code/community/Srka/Unicache/*/*/*/*
+!app/code/community/Srka/Unicache/*/*/*/*/*
+
+*.DS_Store

@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Srka_Unicache>
+			<version>1.0.0</version>
+		</Srka_Unicache>
+	</modules>
+	<global>
+		<blocks>
+			<unicache>
+				<class>Srka_Unicache_Block</class>
+			</unicache>
+		</blocks>
+		
+		<models>
+			<unicache>
+				<class>Srka_Unicache_Model</class>
+				<resourceModel>unicache_mysql4</resourceModel>
+			</unicache>
+	  		<unicache_mysql4>
+				<class>Srka_Unicache_Model_Mysql4</class>
+				<entities>
+					<unicache>
+						<table>unicache</table>
+					</unicache>
+				</entities>
+	        </unicache_mysql4>
+		</models>
+		
+        <resources>
+            <unicache_setup>
+                <setup>
+                    <module>Srka_Unicache</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </unicache_setup>
+            <unicache_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </unicache_write>
+            <unicache_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </unicache_read>
+        </resources>
+
+		<helpers>
+			<unicache>
+				<class>Srka_Unicache_Helper</class>
+			</unicache>
+		</helpers>
+	</global>
+	
+    <admin>
+        <routers>
+			<unicache>
+				<use>admin</use>
+				<args>
+					<module>Srka_Unicache</module>
+					<frontName>unicache</frontName>
+				</args>
+			</unicache>
+        </routers>
+    </admin>
+	
+  	<adminhtml>
+        <menu>
+            <unicache module="unicache">
+                <title>Srka Unicache</title>
+                <sort_order>71</sort_order>               
+				<action>unicache/adminhtml_unicache</action>
+            </unicache>
+        </menu>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <unicache module="unicache">
+                            <title>Unicache</title>
+                            <sort_order>200</sort_order>
+                        </unicache>
+                    </children>
+                </admin>
+            </resources>   
+        </acl>
+    </adminhtml>
+	
+	<crontab>
+	    <jobs>
+	        <srka_unicache_delete_expired>
+	            <schedule><cron_expr>0 0 * * *</cron_expr></schedule>
+	            <run><model>unicache/observer::deleteExpired</model></run>
+	        </srka_unicache_delete_expired>
+	    </jobs>
+	</crontab>
+	
+</config>
