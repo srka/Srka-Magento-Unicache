@@ -39,12 +39,14 @@ Srka Magento Unicache uses one database table to store all the cached data in a 
 Item name is a unique identifier that you can use to create, edit or remove the cached item using only one line of code.
 
 To create a cached item all you need to do is call helper function like this:
-Mage::helper('unicache')->writeCache([ITEM-NAME], [ITEM-CONTENT], [TIMEOUT]);
+
+<b>Mage::helper('unicache')->writeCache([ITEM-NAME], [ITEM-CONTENT], [TIMEOUT]);</b>
 
 Where [ITEM-NAME] is the name of the cached item, [ITEM-CONTENT] is the content you want to cache and [TIMEOUT] is the time in hours that specifies how long should the item be cached (this argument is optional with a default value of 24).
 
 To read the cached data all you need to do is call another helper function like this:
-$cachedData = Mage::helper('unicache')->readCache([ITEM-NAME]);
+
+<b>$cachedData = Mage::helper('unicache')->readCache([ITEM-NAME]);</b>
 
 Where [ITEM-NAME] is the same item name you used when creating the cached item.
 
