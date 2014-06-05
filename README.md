@@ -67,7 +67,7 @@ There are several useful functions included in the extension that you can use to
 Check if there is a cached item with the specified [ITEM-NAME]. This function only checks if the cached item exists it does not check if it has expired. Function returns true if there is a cached item with the specified [ITEM-NAME] and false otherwise.
 
 <b>Mage::helper('unicache')->getCacheItem([ITEM-NAME]);</b><br/>
-This function will return the collection item for the cached item with the specified [ITEM-NAME]. If there is no cached with the specified name function will return NULL.
+This function will return a collection item for the cached item with the specified [ITEM-NAME]. If there is no cached item with the specified name function will return NULL.
 
 <b>Mage::helper('unicache')->cacheExpired([ITEM-NAME]);</b><br/>
 Check if cached item with the specified [ITEM-NAME] has expired. Expired time is calculated by adding item timeout to the last updated time. If the expired time is greater than current time the function will return true, otherwise it will return true. If there is no cached item with the specified [ITEM-NAME] the function will return true.
